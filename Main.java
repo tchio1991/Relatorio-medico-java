@@ -96,7 +96,13 @@ class Main {
     else if(imc > 40) {
       System.out.printf("IMC: %.2f - Obsidade III (Mórbida)\n", imc);
     }
-    System.out.printf("Peso Ideal: %.2f kgs\n", (peso * altura) - 58);
+     // Verificação do Peso Ideal
+     char Conver = sexo.charAt(0);
+     if (Conver == 77) {
+     System.out.printf("Peso Ideal: %.2f kgs\n",(peso * altura) - 58);
+     } else if (Conver == 70) {
+       System.out.printf("Peso Ideal: %.2f kgs\n",(peso * altura) - 44.7);
+     }
 
   }
 }
